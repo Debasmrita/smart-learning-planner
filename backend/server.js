@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
-import cors from "cors";
+//import cors from "cors";
 
 app.use(
   cors({
@@ -40,10 +40,14 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("✅ MongoDB Connected Successfully");
-    app.listen(process.env.PORT || 5000, () => {
+   
+    
+    
+    /*app.listen(process.env.PORT || 5000, () => {
       console.log(`✅ Server running on port ${process.env.PORT || 5000}`);
-    });
+    });*/
   })
   .catch((err) => {
     console.log("❌ MongoDB Connection Error:", err.message);
   });
+export default app;

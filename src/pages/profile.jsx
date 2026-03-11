@@ -24,7 +24,7 @@ export default function Profile() {
     navigate("/login", { replace: true });
   };
 
-  /* ===============================
+  /* ============================
       LOAD PROFILE
   =============================== */
   useEffect(() => {
