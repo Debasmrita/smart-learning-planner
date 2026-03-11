@@ -20,7 +20,8 @@ app.use(
       "https://smart-learning-planner-jet.vercel.app",
       "https://smart-learning-planner-ehrx89qgf-debasmritas-projects.vercel.app"
     ],
-    credentials: true
+    methods: ["GET","POST","PUT","DELETE"],
+    allowedHeaders: ["Content-Type","Authorization"]
   })
 );
 app.use(express.json());
