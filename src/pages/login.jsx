@@ -21,7 +21,7 @@ export default function Login() {
     try {
       setLoading(true);
 
-      const res = await fetch("https://smart-learning-planner-mbui.onrender.com/api/auth/login", {
+      fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
