@@ -31,7 +31,7 @@ export default function Profile() {
     const loadProfile = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/auth/profile`,
+          `${import.meta.env.VITE_API_URL}/api/auth/me`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
