@@ -11,7 +11,18 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://smart-learning-planner-jet.vercel.app",
+      "https://smart-learning-planner-ehrx89qgf-debasmritas-projects.vercel.app"
+    ],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 // Routes
