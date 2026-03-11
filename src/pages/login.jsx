@@ -15,22 +15,32 @@ export default function Login() {
 
     const cleanEmail = email.trim().toLowerCase();
 
-    if (!cleanEmail) return toast.error("Email is required");
-    if (!password) return toast.error("Password is required");
+    if (!cleanEmail) {
+      toast.error("Email is required");
+      return;
+    }
+
+    if (!password) {
+      toast.error("Password is required");
+      return;
+    }
 
     try {
       setLoading(true);
 
-      fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: cleanEmail,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: cleanEmail,
+            password,
+          }),
+        }
+      );
 
       const data = await res.json();
 
@@ -39,23 +49,22 @@ export default function Login() {
         return;
       }
 
-      // ✅ Save token
+      // Save token
       localStorage.setItem("token", data.token);
 
-      // ✅ Save student info
+      // Save student info
       localStorage.setItem("student", JSON.stringify(data.student));
 
-      // ✅ Notify app auth changed
+      // Notify auth change
       window.dispatchEvent(new Event("authChanged"));
 
       toast.success("Login successful ✅");
 
-      // go to dashboard
       navigate("/dashboard");
 
     } catch (err) {
-      console.error(err);
-      toast.error("Backend not running on port 5000 ❌");
+      console.error("Login error:", err);
+      toast.error("Server error ❌");
     } finally {
       setLoading(false);
     }
