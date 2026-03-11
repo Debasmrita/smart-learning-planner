@@ -1,0 +1,33 @@
+/* ---------- LIGHT THEME ---------- */
+:root {
+  --bg-main: linear-gradient(135deg,#8ec5fc,#3bb78f);
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-secondary: #475569;
+}
+
+/* ---------- DARK THEME ---------- */
+body.dark {
+  --bg-main: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f1f5f9;
+  --text-secondary: #cbd5e1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .sidebar {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark .mainContent {
+  background: #121212;
+}

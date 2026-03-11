@@ -1,0 +1,152 @@
+/* ===============================
+   PROFILE PAGE WRAPPER
+================================= */
+.profileWrapper {
+  min-height: 100vh;
+  background: var(--bg-main);
+  padding: 40px 60px;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================= */
+.profileContainer {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ===============================
+   LEFT SIDEBAR (PROFILE TABS)
+================================= */
+.profileSidebar {
+  width: 280px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.profileSidebar h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: var(--text-main);
+}
+
+/* TAB BUTTONS */
+.profileSidebar button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+  text-align: left;
+  color: var(--text-main);
+}
+
+.profileSidebar button:hover {
+  transform: translateX(4px);
+}
+
+/* ACTIVE TAB */
+.activeTab {
+  background: linear-gradient(90deg,#4e9af1,#48c6ef) !important;
+  color: white !important;
+}
+
+/* LOGOUT BUTTON */
+.logoutBtnProfile {
+  background: #ff4d4d !important;
+  color: white !important;
+  margin-top: 30px;
+}
+
+/* ===============================
+   RIGHT CONTENT AREA
+================================= */
+.profileContent {
+  flex: 1;
+}
+
+/* ===============================
+   DASHBOARD-LIKE CARD STYLE
+================================= */
+.glassCard {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+.glassCard h3 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: var(--text-main);
+}
+
+/* ===============================
+   FORM
+================================= */
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  background: transparent;
+  color: var(--text-main);
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.primaryBtn {
+  background: linear-gradient(90deg,#4e9af1,#48c6ef);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.dangerBtn {
+  background: #ff4d4d;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dangerBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
