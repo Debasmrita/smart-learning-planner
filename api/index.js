@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import authRoutes from "../authRoutes.js";
-import topicRoutes from "../topicRoutes.js";
+
+import authRoutes from "../backend/authRoutes.js";
+import topicRoutes from "../backend/topicRoutes.js";
 
 const app = express();
 
