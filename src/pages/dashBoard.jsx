@@ -54,7 +54,7 @@ export default function Dashboard() {
 
       setTopics(data);
     } catch (err) {
-      toast.error("Backend not running on port 5000 ❌");
+      toast.error("Failed to load topics. Please try again ❌");
       console.log(err);
     } finally {
       setLoading(false);
@@ -151,7 +151,7 @@ export default function Dashboard() {
       fetchNextTopic();
 
     } catch (err) {
-      toast.error("Backend not running on port 5000 ❌");
+      toast.error("Failed to add topic. Please try again ❌");
       console.log(err);
     }
   };

@@ -59,7 +59,7 @@ export default function ResetPassword() {
       navigate("/login");
     } catch (err) {
       console.log(err);
-      toast.error("Backend not running on port 5000 ❌");
+      toast.error("Failed to reset password. Please try again ❌");
     } finally {
       setLoading(false);
     }

@@ -52,7 +52,7 @@ export default function Register() {
       navigate("/login");
     } catch (err) {
       console.log(err);
-      toast.error("Backend not running on port 5000 ❌");
+      toast.error("Registration failed. Please try again ❌");
     } finally {
       setLoading(false);
     }

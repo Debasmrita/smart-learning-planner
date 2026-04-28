@@ -44,7 +44,7 @@ export default function ForgotPassword() {
       navigate("/reset-password");
     } catch (err) {
       console.log(err);
-      toast.error("Backend not running on port 5000 ❌");
+      toast.error("Failed to verify email. Please try again ❌");
     } finally {
       setLoading(false);
     }
