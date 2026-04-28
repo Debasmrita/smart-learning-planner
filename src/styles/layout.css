@@ -1,0 +1,17 @@
+/* MAIN APP LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* PAGE AREA */
+.pageContent {
+  flex: 1;
+  padding: 40px 60px;   /* ✅ PROPER SPACING */
+  transition: all 0.3s ease;
+}
+
+/* when sidebar collapsed */
+.sidebar.closed + .pageContent {
+  padding-left: 80px;
+}
