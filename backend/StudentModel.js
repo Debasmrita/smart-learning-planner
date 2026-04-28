@@ -4,23 +4,31 @@ const studentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true
+      required: true,
+      trim: true,
     },
+
     email: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
+      lowercase: true,
+      trim: true,
     },
+
     password: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 );
 
-const Student = mongoose.model("Student", studentSchema);
+// Prevent model overwrite on Vercel
+const Student =
+  mongoose.models.Student ||
+  mongoose.model("Student", studentSchema);
 
 export default Student;
