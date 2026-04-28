@@ -4,6 +4,9 @@ StudyBuddy is a **full-stack productivity web application** designed to help stu
 
 The application allows students to create study topics, manage priorities, monitor their study journey, track progress statistics, and manage their profile securely.
 
+## Live Demo:
+https://smart-learning-planner-rgrj-git-main-debasmritas-projects.vercel.app
+
 ---
 
 # 🚀 Features
