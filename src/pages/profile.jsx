@@ -31,7 +31,7 @@ export default function Profile() {
     const loadProfile = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/auth/me`,
+          `/api/auth/me`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -56,7 +56,7 @@ export default function Profile() {
   const updateProfile = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/update-profile`,
+        `/api/auth/update-profile`,
         {
           method: "PUT",
           headers: {
@@ -89,7 +89,7 @@ export default function Profile() {
   const updatePassword = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/update-password`,
+        `/api/auth/update-password`,
         {
           method: "PUT",
           headers: {

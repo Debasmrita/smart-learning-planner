@@ -29,7 +29,7 @@ export default function Login() {
       setLoading(true);
 
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        `/api/auth/login`,
         {
           method: "POST",
           headers: {
