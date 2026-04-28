@@ -16,10 +16,11 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://smart-learning-planner-jet.vercel.app",
-      "https://smart-learning-planner-ehrx89qgf-debasmritas-projects.vercel.app"
-    ],
+  "http://localhost:5173",
+  "https://smart-learning-planner-jet.vercel.app",
+  "https://smart-learning-planner-ehrx89qgf-debasmritas-projects.vercel.app",
+  "https://smart-learning-planner-rgrj.vercel.app"
+],
     methods: ["GET","POST","PUT","DELETE"],
     allowedHeaders: ["Content-Type","Authorization"]
   })
